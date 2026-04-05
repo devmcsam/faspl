@@ -1,0 +1,73 @@
+[workspace]
+members = [
+    "crates/faspl-lexer",
+    "crates/faspl-ast",
+    "crates/faspl-parser",
+    "crates/faspl-common"
+]
+resolver = "3"
+
+[workspace.package]
+edition = "2024"
+authors = ["Samuel McNally <sammcnally587@gmail.com"]
+license = "Apache-2.0"
+version = "0.1.0"
+
+[workspace.dependencies]
+miette = { version = "7.6.0", features = ["derive"] }
+lasso = "0.7.3"
+bitflags = "2.11.0"
+indexmap = "2.13.1"
+smallvec = "2.0.0-alpha.12"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+warnings = "warn"
+rust_2018_idioms = { level = "warn", priority = -1 }
+rust_2021_compatibility = { level = "warn", priority = -1 }
+rust_2024_compatibility = { level = "warn", priority = -1 }
+missing_docs = "warn"
+unreachable_pub = "warn"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+nursery = { level = "warn", priority = -1 }
+cargo = { level = "warn", priority = -1 }
+
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"
+todo = "deny"
+unimplemented = "deny"
+panic_in_result_fn = "deny"
+implicit_clone = "deny"
+rc_mutex = "deny"
+mutex_atomic = "deny"
+print_stdout = "deny"
+print_stderr = "deny"
+
+missing_errors_doc = "warn"
+missing_panics_doc = "warn"
+must_use_candidate = "warn"
+return_self_not_must_use = "warn"
+wildcard_imports = "warn"
+single_match_else = "warn"
+struct_excessive_bools = "warn"
+type_repetition_in_bounds = "warn"
+doc_markdown = "warn"
+match_bool = "warn"
+match_same_arms = "warn"
+unnested_or_patterns = "warn"
+indexing_slicing = "allow"
+
+module_name_repetitions = "allow"
+similar_names = "allow"
+too_many_lines = "allow"
+too_many_arguments = "allow"
+incompatible_msrv = "allow"
+
+[workspace.lints.rustdoc]
+broken_intra_doc_links = "deny"
+private_intra_doc_links = "deny"
+invalid_rust_codeblocks = "deny"

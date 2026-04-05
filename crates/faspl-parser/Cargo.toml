@@ -1,0 +1,18 @@
+[package]
+name = "faspl-parser"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+categories = ["compilers", "data-structures"]
+keywords = ["faspl", "ast", "compiler"]
+homepage = "https://github/devmcsam/faspl/crates/faspl-parser"
+repository = "https://github/devmcsam/faspl/crates/faspl-parser"
+description = "The parser for the faspl language"
+readme = "README.md"
+publish = false
+
+[dependencies]
+
+[lints]
+workspace = true

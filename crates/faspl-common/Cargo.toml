@@ -1,0 +1,18 @@
+[package]
+name = "faspl-common"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+categories = ["compilers", "data-structures"]
+keywords = ["faspl", "ast", "compiler"]
+homepage = "https://github/devmcsam/faspl/crates/faspl-common"
+repository = "https://github/devmcsam/faspl/crates/faspl-common"
+description = "The shared utilities and common structures for the faspl language"
+readme = "README.md"
+publish = false
+
+[dependencies]
+
+[lints]
+workspace = true
