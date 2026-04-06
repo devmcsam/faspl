@@ -15,3 +15,4 @@
 //! The shared utilities and common structures for the faspl language
 
 pub mod interner;
+pub mod span;
