@@ -13,3 +13,5 @@
 //    limitations under the License.
 
 //! The shared utilities and common structures for the faspl language
+
+pub mod interner;

@@ -13,6 +13,7 @@ readme = "README.md"
 publish = false
 
 [dependencies]
+rustc-hash = { workspace = true }
 
 [lints]
 workspace = true
