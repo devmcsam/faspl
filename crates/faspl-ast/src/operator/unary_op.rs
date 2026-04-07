@@ -14,6 +14,8 @@
 
 //! Built-in unary operators.
 
+use core::fmt;
+
 /// A unary operator. Unary here means it operates on a single operand.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum UnaryOp {
@@ -23,4 +25,14 @@ pub enum UnaryOp {
     Not,
     /// Dereferencing of a pointer: `*x`
     Deref,
+}
+
+impl fmt::Display for UnaryOp {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            Self::Neg => write!(f, "-"),
+            Self::Not => write!(f, "!"),
+            Self::Deref => write!(f, "*"),
+        }
+    }
 }
