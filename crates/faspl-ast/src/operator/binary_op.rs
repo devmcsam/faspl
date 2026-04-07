@@ -14,6 +14,8 @@
 
 //! Built-in binary operators.
 
+use core::fmt;
+
 /// A binary operator. Binary here means it operates on two operands.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum BinOp {
@@ -33,9 +35,9 @@ pub enum BinOp {
     Ne,
     /// Less-than: `a < b`
     Lt,
-    /// Greater-than: `a > b`
-    Le,
     /// Less-than-or-equal: `a <= b`
+    Le,
+    /// Greater-than: `a > b`
     Gt,
     /// Greater-than-or-equal: `a >= b`
     Ge,
@@ -53,4 +55,29 @@ pub enum BinOp {
     Shl,
     /// Right-shift: `a >> b`
     Shr,
+}
+
+impl fmt::Display for BinOp {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            Self::Add => write!(f, "+"),
+            Self::Sub => write!(f, "-"),
+            Self::Mul => write!(f, "*"),
+            Self::Div => write!(f, "/"),
+            Self::Mod => write!(f, "%"),
+            Self::Eq => write!(f, "=="),
+            Self::Ne => write!(f, "!="),
+            Self::Lt => write!(f, "<"),
+            Self::Le => write!(f, "<="),
+            Self::Gt => write!(f, ">"),
+            Self::Ge => write!(f, ">="),
+            Self::And => write!(f, "&&"),
+            Self::Or => write!(f, "||"),
+            Self::BitAnd => write!(f, "&"),
+            Self::BitOr => write!(f, "|"),
+            Self::BitXor => write!(f, "^"),
+            Self::Shl => write!(f, "<<"),
+            Self::Shr => write!(f, ">>"),
+        }
+    }
 }
