@@ -14,5 +14,6 @@ publish = false
 
 [dependencies]
 faspl-common = { path = "../faspl-common" }
+
 [lints]
 workspace = true
